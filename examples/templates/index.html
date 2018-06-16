@@ -2,12 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sightengine demo - Python and Flask</title>
+  <title>StreetSmart</title>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreetSmart</title>
+  <link href="/static/bootstrap/css/theme.css" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.7/typicons.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/pushy.css">
+  <link rel="stylesheet" href="/static/css/masonry.css">
+  <link rel="stylesheet" href="/static/css/animate.css">
+  <link rel="stylesheet" href="/static/css/magnific-popup.css">
+  <link rel="stylesheet" href="/static/css/odometer-theme-default.css">
+  <script>
+  window.odometerOptions = {
+    selector: '.odometer',
+    format: '(,ddd)', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+    duration: 13000, // Change how long the javascript expects the CSS animation to take
+    theme: 'default'
+  };
+  </script>
 </head>
 
 <body>
 <header class="navbar">
+
+    <header id="home">
+        <div class="container-fluid">
+            <!-- change the image in style.css to the class header .container-fluid [approximately row 50] -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-10">
+                        <a href="#" class="thumbnail logo">
+                            <img src="images/your_logo.png" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-md-1 col-md-offset-8 col-xs-2 text-center">
+                      <div class="menu-btn"><span class="hamburger">&#9776;</span></div>
+                    </div>
+                </div>
+                <div class="jumbotron">
+                    <h1><small>intro Line</small></br>
+        <strong>Street-Smart</strong></h1>
+                    <p>Description of StreetSmart</p>
+                    <p><a class="btn btn-primary btn-lg" role="button">Live Demo</a> <a target="_blank" href="http://www.themeinthebox.com/ourtheme/mountain-king-bootstrap-template/" class="btn btn-lg btn-danger" role="button">Upload</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="feat">
+        <div class="container">
+            <div class="row features">
+                <div class="col-md-6 text-center wow fadeInUp" data-wow-delay="100ms">
+                    <span class="typcn typcn-camera-outline x3"></span>
+                    <h4>Upload Images</h4>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+                <div class="col-md-6 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <span class="typcn typcn-bookmark x3"></span>
+                    <h4>Get Results</h4>
+                    <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="prefooter wow fadeInUp" data-wow-delay="300ms">
+        <!-- change the image in style.css to the class .prefooter .container-fluid [approximately row 154] -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Maecenas sed diam eget risus varius<br> blandit sit amet non magna.</h3>
+                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Email Here...">
+                                <br>
+                                <button type="button" class="btn btn-danger">Submit Newsletter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Your Logo</h3>
+                    <p>© 2018 Street Smart.</p>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
   <form action="/upload" method="post" enctype="multipart/form-data" >
       <span class="btn btn-default btn-file">
         Browse <input type="file" name="image">
@@ -20,6 +114,18 @@
       <a href="https://sightengine.com/">Sightengine</a>
   </span>
 </header>
-
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-scrollspy.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
+<script src="/static/js/masonry.js"></script>
+<script src="/static/js/pushy.min.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/wow.min.js"></script>
+<script src="/static/js/scripts.js"></script>
+<script src="/static/js/odometer.js"></script>
 </body>
 </html>
