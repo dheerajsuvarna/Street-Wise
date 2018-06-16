@@ -50,7 +50,16 @@
                     <h1><small>intro Line</small></br>
         <strong>Street-Smart</strong></h1>
                     <p>Description of StreetSmart</p>
-                    <p><a class="btn btn-primary btn-lg" role="button">Live Demo</a> <a target="_blank" href="http://www.themeinthebox.com/ourtheme/mountain-king-bootstrap-template/" class="btn btn-lg btn-danger" role="button">Upload</a></p>
+
+                    <p>  
+                      <form action="/upload" method="post" enctype="multipart/form-data" >
+                      <span class="btn btn-primary btn-lg">
+                        Browse <input type="file" name="image">
+                      </span>
+                
+                    <input type="submit" value="Upload your image" class="btn btn-lg btn-danger">
+                  </form>
+                   
                 </div>
             </div>
         </div>
@@ -102,13 +111,7 @@
             </div>
         </div>
     </footer>
-  <form action="/upload" method="post" enctype="multipart/form-data" >
-      <span class="btn btn-default btn-file">
-        Browse <input type="file" name="image">
-      </span>
-
-    <input type="submit" value="Upload your image" class="btn btn-primary">
-  </form>
+ 
 
   <span class="navbar-text"> Image moderation with
       <a href="https://sightengine.com/">Sightengine</a>
