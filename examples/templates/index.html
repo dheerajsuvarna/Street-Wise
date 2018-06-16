@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>StreetSmart</title>
-  <link href="/static/bootstrap/css/theme.css" rel="stylesheet">
+  <link href="/static/css/theme.css" rel="stylesheet">
   <link href="/static/css/style.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
@@ -53,7 +53,7 @@
 
                     <p>  
                       <form action="/upload" method="post" enctype="multipart/form-data" >
-                      <button id="liveDemoBtn" class="btn btn-primary btn-lg"></span>
+                      <button id="liveDemoBtn" class="btn btn-primary btn-lg"></button>
                       <input style="display:none" id="uploadFile" type="file" name="image">
                       
                 
@@ -111,7 +111,13 @@
             </div>
         </div>
     </footer>
- 
+  <form action="/upload" method="post" enctype="multipart/form-data" >
+      <span class="btn btn-default btn-file">
+        Browse <input type="file" name="image">
+      </span>
+
+    <input type="submit" value="Upload your image" class="btn btn-primary">
+  </form>
 
   <span class="navbar-text"> Image moderation with
       <a href="https://sightengine.com/">StreetSmart</a>
