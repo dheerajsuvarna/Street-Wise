@@ -40,7 +40,7 @@ def mapview():
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
              'lat': 37.4419,
              'lng': -122.1419,
-             'infobox': "<img src='{{url_for('static', filename='ex1.jpg')}}'>"
+             'infobox': "<img src='/static/images/testgps.JPG'>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
