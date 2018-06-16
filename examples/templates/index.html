@@ -54,7 +54,7 @@
 
                     <p>  
                       <form action="/upload" method="post" enctype="multipart/form-data" >
-                      <button id="liveDemoBtn" class="btn btn-primary btn-lg"></button>
+                      <button id="liveDemoBtn" onclick="open()" class="btn btn-primary btn-lg">Live Demo</button>
                       <input style="display:none" id="uploadFile" type="file" name="image">
                       
                 
@@ -125,9 +125,10 @@
   </span>
 </header>
 <script>
-  $('#liveDemoBtn').click(function(){
-    $('#uploadFile').click();
-});
+  function open(){
+    console.log("Working")
+    document.getElementById("uploadFile").click();
+  }
 </script>
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/static/js/jquery.min.js"></script>
